@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.here.conference.example.map">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_maps">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="{YOUR_GOOGLE_MAP_KEY}" />
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="{YOUR_HERE_MAP_ID}" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="{YOUR_HERE_MAP_TOKEN}" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="{YOUR_HERE_MAP_LICENSE_KEY}" />
+
+        <meta-data
+            android:name="INTENT_NAME"
+            android:value="HERMES_HERE_MAP_INTENT" />
+
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:exported="false"
+            android:label="HERMES_HERE_MAP_SERVICE">
+            <intent-filter>
+                <action android:name="HERMES_HERE_MAP_INTENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

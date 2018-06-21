@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_google"
+        android:enabled="true"
+        android:icon="@drawable/ic_google_maps"
+        android:title="Google Maps"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/navigation_here"
+        android:enabled="true"
+        android:icon="@drawable/ic_here_maps"
+        android:title="HERE Maps"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/navigation_mapbox"
+        android:enabled="true"
+        android:icon="@drawable/ic_mapbox"
+        android:title="Mapbox"
+        app:showAsAction="ifRoom" />
+</menu>
